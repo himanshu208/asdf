@@ -1,4 +1,4 @@
-<ion-view class="layouts-view" id="caregiver" style="background: #FFF !important;">
+<ion-view class="layouts-view" id="caregiver-form" style="background: #FFF !important;">
     <ion-nav-buttons side="left">
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
     </ion-nav-buttons>
@@ -6,82 +6,81 @@
         <span>Details for Care Giver</span>
     </ion-nav-title>
     <ion-content>
-        <div class="list" style="    text-align: left;">                   
-            <label class="item item-input" style=" margin-top: 5px; ">
-                <select style=" height: 50px; width: 90%; ">
+	<ul class="list">
+	  
+	  <select style="width:98%; border:0px; padding-left:10px; height: 40px; background: #ff">
                     <option value="">Age of patient</option>
                     <option ng-repeat="i in [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]" value="{{i}}" >{{i}}</option>
                 </select>
-            </label>
-            <span style=" padding: 6px 0 5px 16px; ">Medical condition of the patient</span>                     
-            <label class="item item-input" style=" margin-top: 5px; ">
-                <input type="text" placeholder="Name" name="user_name" ng-model="user.name" required>
-            </label>
-            <span style=" padding: 6px 0 5px 16px; ">Any Specific Instructions</span>                     
-            <label class="item item-input" style=" margin-top: 5px; ">
-                <input type="text" placeholder="Name" name="user_name" ng-model="user.name" required>
-            </label>
-            <span style=" padding: 6px 0 5px 16px; ">Any Specific Certification Needed?</span>                     
-            <ion-radio ng-model="radioChoice" ng-value="'A'">Yes</ion-radio>
-            <ion-radio ng-model="radioChoice" ng-value="'B'">No</ion-radio>
-            <span style=" padding: 6px 0 5px 16px; ">Describe your requirement </span>                     
-            <label class="item item-input" style=" margin-top: 5px; ">
-                <input type="text" placeholder="Name" name="user_name" ng-model="user.name" required>
-            </label>
-            <span style=" padding: 6px 0 5px 16px; ">Date and time for Caregiver</span> 
-            <br/>
-            From
-            <input type="date" placeholder="From Date" name="user_dob" ng-model="user.dob" required>
-            <input type="time" placeholder="From TIme" name="user_dob" ng-model="user.dob" required>
 
-            <br/>
-            To
-            <input type="date" placeholder="To Date" name="user_dob" ng-model="user.dob" required>
-            <input type="time" placeholder="To TIme" name="user_dob" ng-model="user.dob" required>
-            <a class="login button button-block button-stable" ui-sref="app.careiver-list">
-                PROCEED
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Medical condition of the patient</span>
+        <input type="text" placeholder="Medical condition of the patient" name="user_name" ng-model="user.name" required>
+      </label>
+	  
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Any Specific Instructions</span>
+        <input type="text" placeholder="Any Specific Instructions" name="Specific" ng-model="Specific" required>
+      </label>
+
+      <div class="item item-input item-divider">Any Specific Certification Needed?</div>
+
+            <div class="radio-box">
+			<ion-radio ng-model="radioChoice" ng-value="'A'">Yes</ion-radio></div>
+            <div class="radio-box">
+			<ion-radio ng-model="radioChoice" ng-value="'B'">No</ion-radio></div>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Describe your requirement</span>
+        <input type="text" placeholder="Describe your requirement" name="requirement" ng-model="requirement" required>
+      </label>
+
+      <div class="item item-input">Date and time for caregiver</div>
+
+	  <div class="item">From </div>
+      <label class="item item-stacked-label">
+       <div class="radio-box"><input type="date"></div>
+		<div class="radio-box"><input type="time"></div>
+      </label>
+	  
+	  <div class="item">To </div>
+     <label class="item item-stacked-label">
+        <div class="radio-box"><input type="date"></div>
+		 <div class="radio-box"><input type="time"></div>
+      </label>
+
+
+		 <div class="btn"><a class="login button button-block button-stable">
+               SUBMIT
             </a>
-        </div>
+			</div>
+    </ul>
 
         <style>
-            #caregiver .checkbox input, .checkbox-icon {
-                position: relative;
-                width: 118px;
-                height: 124px;
-                display: block;
-                border: 0;
-                background: transparent;
-                cursor: pointer;
-                -webkit-appearance: none;
-                margin-top: -48px;
-            }
+      #caregiver-form .button.button-stable {
+    border-color: #891e52;
+    background-color: #891e52;
+    color: #f7f7f7;
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+    border-radius: 8px;
+}
 
-            #caregiver .checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
-                background: transparent;
-                border-color: #387ef5;
-            }
+#caregiver-form .btn {
+    width: 50%;
+    margin: 0 auto;
+}
 
-            #caregiver .checkbox input .checkbox input:before, .checkbox-icon:before {
-                display: table;
-                width: 100%;
-                height: 100%;
-                border-width: 1px;
-                border-style: solid;
-                border-radius: 28px;
-                background: transparent;
-                content: ' ';
-                -webkit-transition: background-color 20ms ease-in-out;
-                transition: background-color 20ms ease-in-out;
-            }
+#caregiver-form .radio-box{
+ width:  50%;
+  float:left;
+}
 
-            #caregiver .item-checkbox {
-                padding-left: 48px;
-            }
-
-            #caregiver label.item.item-checkbox.ng-valid {
-                width: 50%;
-                float: left;
-            }
+#caregiver-form .radio-box-left{
+ width:  50%;
+  float:left;
+}
 
         </style>
 
