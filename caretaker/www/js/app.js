@@ -418,6 +418,15 @@ angular.module('sspf', [
                             }
                         }
                     })
+                    .state('app.changepassword', {
+                        url: "/changepassword",
+                        views: {
+                            'menuContent': {
+                                templateUrl: "views/app/changepassword.html",
+                                controller: 'ChangepasswordCtrl'
+                            }
+                        }
+                    })
 
                     .state('app.bookmarks', {
                         url: "/bookmarks",

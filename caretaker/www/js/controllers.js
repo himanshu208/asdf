@@ -507,6 +507,9 @@ angular.module('sspf.controllers', ['sspf.config'])
             };
 
         })
+        .controller('ChangepasswordCtrl', function ($scope, $state, $http, $stateParams, Document, API_URL, $ionicLoading, $location, $q) {
+            
+        })
         .controller('ProfileCtrl', function ($scope, $state, $http, $stateParams, Document, API_URL, $ionicLoading, $location, $q) {
 
             var profileType = $stateParams.profileType,
