@@ -416,6 +416,13 @@ angular.module('sspf.controllers', ['sspf.config'])
             }
 
         })
+        .controller('CaregiverListCtrl', function ($scope, $state, $http, $stateParams) {
+
+            $scope.ShowHide = function () {
+                $scope.IsVisible = $scope.IsVisible = true;
+            }
+
+        })
         .controller('TeamCtrl', function ($scope, $state, $timeout, $http, $q, Document, $stateParams, API_URL, $ionicLoading, $cordovaSQLite) {
             $scope.apiUrl = API_URL;
             $scope.selectPlayers = function ($q) {

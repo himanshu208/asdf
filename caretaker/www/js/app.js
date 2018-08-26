@@ -229,7 +229,17 @@ angular.module('sspf', [
                                 controller: 'CaregiverCtrl'
                             }
                         }
-                    }).state('app.hire-babysitter', {
+                    })
+                    .state('app.careiver-list', {
+                        url: "/careiver-list",
+                        views: {
+                            'menuContent': {
+                                templateUrl: "views/app/feeds/hire/careiver-list.html",
+                                controller: 'CaregiverListCtrl'
+                            }
+                        }
+                    })
+                    .state('app.hire-babysitter', {
                         url: "/hire/babysitter",
                         views: {
                             'menuContent': {
@@ -237,7 +247,8 @@ angular.module('sspf', [
                                 controller: 'HireCtrl'
                             }
                         }
-                    }).state('app.hire-cleaner', {
+                    })
+                    .state('app.hire-cleaner', {
                         url: "/hire/cleaner",
                         views: {
                             'menuContent': {
@@ -245,7 +256,8 @@ angular.module('sspf', [
                                 controller: 'HireCtrl'
                             }
                         }
-                    }).state('app.hire', {
+                    })
+                    .state('app.hire', {
                         url: "/hire",
                         views: {
                             'menuContent': {
