@@ -230,6 +230,15 @@ angular.module('sspf', [
                             }
                         }
                     })
+                    .state('app.hire-careiver-form', {
+                        url: "/hire/careiver-form",
+                        views: {
+                            'menuContent': {
+                                templateUrl: "views/app/feeds/hire/careiver-form.html",
+                                controller: 'CaregiverCtrl'
+                            }
+                        }
+                    })
                     .state('app.careiver-list', {
                         url: "/careiver-list",
                         views: {

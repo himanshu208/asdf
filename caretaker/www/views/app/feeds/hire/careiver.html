@@ -12,92 +12,52 @@
             <ion-checkbox ng-model="checkOpt3"><img src="img/icons/washing.png"/><br/>Washing</ion-checkbox>
             <ion-checkbox ng-model="checkOpt4"><img src="img/icons/bathing.png"/><br/>Bathing</ion-checkbox>
             <ion-checkbox ng-model="checkOpt5"><img src="img/icons/feeding.png"/><br/>Feeding</ion-checkbox>
-            <a class="login button button-block button-stable" ng-click="ShowHide()" >
+            <a class="login button button-block button-stable" ui-sref="app.hire-careiver-form">
                 PROCEED
             </a>
         </div>
-        <div ng-hide="">
-            <h3>Details for Care Giver</h3>
-            <div class="list" style="    text-align: left;">                   
-                <label class="item item-input" style=" margin-top: 5px; ">
-                    <select style=" height: 50px; width: 90%; ">
-                        <option value="">Age of patient</option>
-                        <option ng-repeat="i in [5, 6, 7, 8,9,10,11,12,13,14,15]" value="{{i}}" >{{i}}</option>
-                    </select>
-                </label>
- <span style=" padding: 6px 0 5px 16px; ">Medical condition of the patient</span>                     
-                    <label class="item item-input" style=" margin-top: 5px; ">
-                    <input type="text" placeholder="Name" name="user_name" ng-model="user.name" required>
-                  </label>
-  <span style=" padding: 6px 0 5px 16px; ">Any Specific Instructions</span>                     
-                    <label class="item item-input" style=" margin-top: 5px; ">
-                    <input type="text" placeholder="Name" name="user_name" ng-model="user.name" required>
-                  </label>
-  <span style=" padding: 6px 0 5px 16px; ">Any Specific Certification Needed?</span>                     
-                <ion-radio ng-model="radioChoice" ng-value="'A'">Yes</ion-radio>
-      <ion-radio ng-model="radioChoice" ng-value="'B'">No</ion-radio>
-      <span style=" padding: 6px 0 5px 16px; ">Describe your requirement </span>                     
-                    <label class="item item-input" style=" margin-top: 5px; ">
-                    <input type="text" placeholder="Name" name="user_name" ng-model="user.name" required>
-                  </label>
-      <span style=" padding: 6px 0 5px 16px; ">Date and time for Caregiver</span> 
-      <br/>
-      From
-      <input type="date" placeholder="From Date" name="user_dob" ng-model="user.dob" required>
-      <input type="time" placeholder="From TIme" name="user_dob" ng-model="user.dob" required>
-      
-      <br/>
-      To
-      <input type="date" placeholder="To Date" name="user_dob" ng-model="user.dob" required>
-      <input type="time" placeholder="To TIme" name="user_dob" ng-model="user.dob" required>
-                <a class="login button button-block button-stable" ui-sref="app.careiver-list">
-                    PROCEED
-                </a>
-            </div>
-			
-			<style>
-				#caregiver .checkbox input, .checkbox-icon {
-											position: relative;
-											width: 118px;
-											height: 124px;
-											display: block;
-											border: 0;
-											background: transparent;
-											cursor: pointer;
-											-webkit-appearance: none;
-											margin-top: -48px;
-				}
-				
-				#caregiver .checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
-    background: transparent;
-    border-color: #387ef5;
-}
+         <style>
+            #caregiver .checkbox input, .checkbox-icon {
+                position: relative;
+                width: 118px;
+                height: 124px;
+                display: block;
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+                -webkit-appearance: none;
+                margin-top: -48px;
+            }
 
-#caregiver .checkbox input .checkbox input:before, .checkbox-icon:before {
-    display: table;
-    width: 100%;
-    height: 100%;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 28px;
-    background: transparent;
-    content: ' ';
-    -webkit-transition: background-color 20ms ease-in-out;
-    transition: background-color 20ms ease-in-out;
-}
+            #caregiver .checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+                background: transparent;
+                border-color: #387ef5;
+            }
 
-#caregiver .item-checkbox {
-    padding-left: 48px;
-}
+            #caregiver .checkbox input .checkbox input:before, .checkbox-icon:before {
+                display: table;
+                width: 100%;
+                height: 100%;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 28px;
+                background: transparent;
+                content: ' ';
+                -webkit-transition: background-color 20ms ease-in-out;
+                transition: background-color 20ms ease-in-out;
+            }
 
-#caregiver label.item.item-checkbox.ng-valid {
-    width: 50%;
-    float: left;
-}
-			
-			</style>
-			
-    </ion-content>
+            #caregiver .item-checkbox {
+                padding-left: 48px;
+            }
+
+            #caregiver label.item.item-checkbox.ng-valid {
+                width: 50%;
+                float: left;
+            }
+
+        </style>
+     </ion-content>
 	
 	
 </ion-view>
