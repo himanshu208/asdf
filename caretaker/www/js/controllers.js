@@ -117,12 +117,12 @@ angular.module('sspf.controllers', ['sspf.config'])
                     template: 'Loading...'
                 });
                 $http.post($scope.apiUrl + '/register', {
-                    name: $scope.user.name,
-                    email: $scope.user.email,
-                    phone: $scope.user.phone,
-                    phone2: $scope.user.phone2,
-                    dob: $scope.user.dob,
-                    password: $scope.user.password
+                    name: $scope.register.user_name,
+                    email: $scope.register.user_email,
+                    phone: $scope.register.user_phone,
+                    phone2: $scope.register.user_phone2,
+                    dob: $scope.register.user_dob,
+                    password: $scope.register.user_password
                 })
                         .success(function (response) {
                             alert(JSON.stringify(response));
@@ -166,10 +166,15 @@ angular.module('sspf.controllers', ['sspf.config'])
                         });
             };
             $scope.user = {};
-
+            $scope.register = {};
             $scope.user.email = "himanshu.208@gmail.com";
             $scope.user.password = "123456";
-
+            $scope.register.user_name = "";
+            $scope.register.user_email = "";
+            $scope.register.user_phone = "";
+            $scope.register.user_phone2 = "";
+            $scope.register.user_dob = "";
+            $scope.register.user_password = "";
             // We need this for the form validation
             $scope.selected_tab = "";
 
@@ -508,7 +513,7 @@ angular.module('sspf.controllers', ['sspf.config'])
 
         })
         .controller('ChangepasswordCtrl', function ($scope, $state, $http, $stateParams, Document, API_URL, $ionicLoading, $location, $q) {
-            
+
         })
         .controller('ProfileCtrl', function ($scope, $state, $http, $stateParams, Document, API_URL, $ionicLoading, $location, $q) {
 
