@@ -1,0 +1,46 @@
+<ion-view class="feeds-categories-view">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-title> <span>Players</span> </ion-nav-title>
+    <ion-content>
+        <div class="row " > 
+            <div class="player_list" ng-init="teamList()">
+                <h1 ng-repeat="item in players">
+                    <div class="player_list_list" >
+
+                        <a class="player_list_item player_list_item-avatar"  ui-sref="app.profile({profileType: 'myteam', id: item.id })" >
+                        <pre-img helper-class="rounded-image pre_image"  >
+                                <img ng-src="{{item.photo}}" style="width:100%" spinner-on-load/>
+                                
+                            </pre-img>
+
+                            <!--img src="img/feeds/images.jpg" width="151" height="164" /-->
+                            <h2>{{item.first_name}} {{item.last_name}}</h2>
+
+                        </a>
+                    </div>
+                    
+             <div class="player_list_div row"></div>
+                </h1>
+
+            </div>
+           
+        </div>
+        <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0;    width: 90%;margin-top: 20px;}
+            .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+            .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+            .tg .tg-9hbo{font-weight:bold;vertical-align:top; text-transform: capitalize;}
+            .tg .tg-yw4l{vertical-align:top;text-transform: capitalize;}
+        </style>
+        <center>
+            <table class="tg"  data-ng-init="data()">
+                <tr  ng-repeat="(key, value) in data()">
+                    <th class="tg-9hbo">{{ key}}</th>
+                    <td class="tg-yw4l">{{value}}</td>
+                </tr>
+            </table>
+        </center>
+    </ion-content>
+</ion-view>

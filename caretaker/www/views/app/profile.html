@@ -1,0 +1,81 @@
+<ion-view class="player_profile">
+  <ion-nav-title> <span>{{profileTitle}}</span> </ion-nav-title>
+  <ion-content>
+    <div class="top-content row">
+      <div class="player_pic" ng-show="PlayerProfile"  >
+        <div class="player_pic_outer">
+            <h1> <pre-img ratio="_1_1" helper-class="rounded-image"> <img id="myImage" ng-src="{{document.photo}}"  spinner-on-load /></pre-img> </h1>
+        </div>
+        <h2>{{document.first_name}} {{document.last_name}}</h2>
+        <div class="player_profile">
+          <h3 class="right-align yellow col-offset-25">S/O</h3>
+          <h4 class="left-align col-offset-75">{{document.fa_name}}</h4>
+        </div>
+        <div class="divider"></div>
+        <div class="player_profile">
+          <h3 class="right-align yellow col-offset-25">DOB</h3>
+          <h4 class="left-align col-offset-75">{{document.dob}}</h4>
+        </div>
+        <div class="divider"></div>
+        <div class="player_profile">
+          <h3 class="right-align yellow col-offset-25">School</h3>
+          <h4 class="left-align col-offset-75">{{document.School_Name}}</h4>
+        </div>
+        <div class="divider"></div>
+        <div class="player_profile">
+          <h3 class="right-align yellow col-offset-25">state</h3>
+          <h4 class="left-align col-offset-75">{{document.state_name}}</h4>
+        </div>
+        <div class="divider"></div>
+        <div class="player_profile" >
+          <h3 class="right-align yellow col-offset-25">Mobile No.</h3>
+          <h4 class="left-align col-offset-75">{{document.mob_father}}</h4>
+        </div>
+        <div class="divider margin-bottom"></div>
+        
+        <div style="width:96%;margin:0 2%; float:left; padding:10px 0;" class="backgroud_grad">
+        <div class="row margin-bottom">
+        <span class=" col col-50 left-align font17 white player_profile_pad">Upload Photo </span><span class=" col col-20 left-align font17 white player_photo_box">
+        <input type="hidden" name="photo" id="photo"/>
+        <img id="myImage2" style="width:100% !important; " src="{{document.photo}}"/></span> <span class="col right-align"><button class="player_upload " style="background:none; border:none; width:100%; height:100%;"  ng-click="capturePhoto(document.id, 'photo')"><i class="icon ion-ios-camera camera" ></i> </button></span></div>
+     
+     
+      <div class="row margin-bottom">
+      <span class=" col col-50 left-align font17 white player_profile_pad">Upload DOB Proof </span><span class=" col col-20 left-align font17 white player_photo_box">
+      <input type="hidden" name="dobproof" id="dobproof"/>
+      <img id="myImage3" style="     width: 100%; "src="{{document.certificate}}"/></span> <span class="col right-align"> <button class="player_upload " style="background:none; border:none; width:100%; height:100%;"  ng-click="capturePhoto(document.id, 'dobproof')"><i class="icon ion-android-upload camera"></i></button></span></div>
+    
+   
+    <div class="row margin-bottom">
+    <span class=" col col-50 left-align font17 white player_profile_pad">Upload Aadhar Card Proof</span> <span class=" col col-20 left-align font17 white player_photo_box">
+    <input type="hidden" name="aadharcard" id="aadharcard"/>
+    <img id="myImage4" style="     width: 100%; " src="{{document.addre_proof}}"/></span> <span class="col right-align"> <button class="player_upload" style="background:none; border:none; width:100%; height:100%;"   ng-click="capturePhoto(document.id, 'aadharcard')"><i class="icon ion-android-upload camera"></i>  </button></span>
+    </div>
+  
+    <div class="row">
+    <button class="player_upload btn button button-energized"  ng-click="uploadImage(document.id)">
+   Upload to Server 
+    </button>
+    </div>
+    </div>
+    </div ng-repeat-end >
+    <div class="player_pic" ng-show="MyProfile">
+      <div class="player_pic_outer">
+        <h1> <img id="myImage" src="img/noimage.png"  /> </h1>
+      </div>
+      <h2>{{fullname}}</h2>
+      <!--div class="player_profile"><h3 class="right-align yellow col-offset-25">S/O</h3><h4 class="left-align col-offset-75">Karamjeet Dhaiya</h4></div>
+                <div class="divider"></div>
+                <div class="player_profile"><h3 class="right-align yellow col-offset-25">DOB</h3><h4 class="left-align col-offset-75">29/04/2003</h4></div>
+                <div class="divider"></div>
+                <div class="player_profile"><h3 class="right-align yellow col-offset-25">School</h3><h4 class="left-align col-offset-75">Army public school gwalior, Madhya pardewh</h4></div>
+                <div class="divider"></div>
+                <div class="player_profile"><h3 class="right-align yellow col-offset-25">state</h3><h4 class="left-align col-offset-75">madhya pradesh</h4></div>
+                <div class="divider"></div>
+                <div class="player_profile"><h3 class="right-align yellow col-offset-25">Mobile No.</h3><h4 class="left-align col-offset-75">+91 8871991935</h4></div-->
+      <div class="divider margin-bottom"></div>
+    </div>
+    </div>
+    <div class="bottom-content"> </div>
+  </ion-content>
+</ion-view>

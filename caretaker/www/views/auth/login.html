@@ -1,0 +1,71 @@
+<ion-view class="login-view auth-view" cache-view="false">
+  <ion-content >
+    <div class="row" style="text-align: center; ">
+      <div class="col col-center"> <img ng-src="img/logo.png" style=" width: 50%; ">
+        <div class="card login-container" content-tabs tabsdata='tabsdata'>
+           
+          <form name="login_form" class="" novalidate ng-cloak>
+            <my-tabs>
+              <my-tab title="User Login">
+                <div class="list"  style="    text-align: left;">
+                    <span style=" padding: 6px 0 5px 16px; ">Email</span>
+                  <label class="item item-input" style=" margin-top: 5px; ">
+                    <input type="email" placeholder="Email" name="user_email" ng-model="user.email" required>
+                  </label>
+                    <span style=" padding: 6px 0 5px 16px; ">Password</span>
+                  <label class="item item-input" style=" margin-top: 5px; ">
+                    <input type="password" placeholder="Password" name="user_password" ng-model="user.password" required >
+                  </label>
+                    <button type="submit" class="button button-positive button-block" ng-click="doLogIn()" ng-disabled="(selected_tab=='Email') ? (login_form.user_email.$invalid || login_form.user_password.$invalid) : ((selected_tab=='Phone') ? (login_form.user_phone.$invalid || login_form.user_pin.$invalid) : false)">
+               PROCEED
+              </button>
+                </div>
+              </my-tab>
+             <my-tab title="Register">
+                 
+                 <div class="list" style="    text-align: left;">
+                     <span style=" padding: 6px 0 5px 16px; ">Name</span>                     
+                    <label class="item item-input" style=" margin-top: 5px; ">
+                    <input type="text" placeholder="Name" name="user_name" ng-model="user.name" required>
+                  </label>
+                     <span style=" padding: 6px 0 5px 16px; ">Email Address</span>
+                  <label class="item item-input" style=" margin-top: 5px; ">
+                    <input type="email" placeholder="Email Address" name="user_email" ng-model="user.email" required>
+                  </label>
+                     <span style=" padding: 6px 0 5px 16px; ">Create a Password</span>
+                  <label class="item item-input" style=" margin-top: 5px; ">
+                    <input type="password" placeholder="Create a Password" name="user_password" ng-model="user.password" required >
+                  </label>
+                     <span style=" padding: 6px 0 5px 16px; ">Cellphone Number</span>
+                     <label class="item item-input" style=" margin-top: 5px; ">
+                    <input type="number" placeholder="Cellphone Number" name="user_phone" ng-model="user.phone" required>
+                  </label>
+                     <span style=" padding: 6px 0 5px 16px; ">Emergency Contact Number</span>
+                     <label class="item item-input" style=" margin-top: 5px; ">
+                    <input type="number" placeholder="Emergency Contact Number " name="user_phone2" ng-model="user.phone2" required>
+                  </label>
+                     <span style=" padding: 6px 0 5px 16px; ">Date of Birth</span>
+                     <label class="item item-input" style=" margin-top: 5px; ">
+                    <input type="date" placeholder="Date of Birth" name="user_dob" ng-model="user.dob" required>
+                  </label>
+                    <button type="submit" class="button button-positive button-block" ng-click="doRegister()" ng-disabled="(selected_tab=='Email') ? (login_form.user_email.$invalid || login_form.user_password.$invalid) : ((selected_tab=='Phone') ? (login_form.user_phone.$invalid || login_form.user_pin.$invalid) : false)">
+              PROCEED
+              </button>
+                </div>
+              </my-tab>
+            </my-tabs>
+            <div class="item item-body bottom-content">
+              
+            </div>
+          </form>
+        </div>
+          <div class="alternative-actions" style="display: none;">
+          <a class="forgot-password button button-small button-clear button-light" ui-sref="auth.forgot-password">
+            Forgot Password?
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

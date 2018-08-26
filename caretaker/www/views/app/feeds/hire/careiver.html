@@ -1,0 +1,35 @@
+<ion-view class="layouts-view" style="    background: #FFF !important;">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        <span>Activity for Care Giver</span>
+    </ion-nav-title>
+    <ion-content>
+        <div ng-hide="IsVisible">
+            <ion-checkbox ng-model="checkOpt1"><img src="img/icons/cooking.png"/><br/>Cooking</ion-checkbox>
+            <ion-checkbox ng-model="checkOpt2"><img src="img/icons/cleaning.png"/><br/>Cleaning</ion-checkbox>
+            <ion-checkbox ng-model="checkOpt3"><img src="img/icons/washing.png"/><br/>Washing</ion-checkbox>
+            <ion-checkbox ng-model="checkOpt4"><img src="img/icons/bathing.png"/><br/>Bathing</ion-checkbox>
+            <ion-checkbox ng-model="checkOpt5"><img src="img/icons/feeding.png"/><br/>Feeding</ion-checkbox>
+            <a class="login button button-block button-stable" ng-click="ShowHide()" >
+                PROCEED
+            </a>
+        </div>
+        <div ng-hide="">
+            <h3>Details for Care Giver</h3>
+            <div class="list" style="    text-align: left;">                   
+                <label class="item item-input" style=" margin-top: 5px; ">
+                    <select>
+                        <option value="">Age of patient</option>
+                        <option ng-repeat="i in [5, 6, 7, 8,9,10,11,12,13,14,15]" value="{{i}}" >{{i}}</option>
+                    </select>
+                </label>
+
+                <a class="login button button-block button-stable" ng-click="" >
+                    PROCEED
+                </a>
+            </div>
+    </ion-content>
+</ion-view>
+
