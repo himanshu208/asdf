@@ -230,6 +230,15 @@ angular.module('sspf', [
                             }
                         }
                     })
+                    .state('app.hire-careiver-form', {
+                        url: "/hire/careiver-form",
+                        views: {
+                            'menuContent': {
+                                templateUrl: "views/app/feeds/hire/careiver-form.html",
+                                controller: 'CaregiverCtrl'
+                            }
+                        }
+                    })
                     .state('app.careiver-list', {
                         url: "/careiver-list",
                         views: {
@@ -415,6 +424,15 @@ angular.module('sspf', [
                             'menuContent': {
                                 templateUrl: "views/app/profile.html",
                                 controller: 'ProfileCtrl'
+                            }
+                        }
+                    })
+                    .state('app.changepassword', {
+                        url: "/changepassword",
+                        views: {
+                            'menuContent': {
+                                templateUrl: "views/app/changepassword.html",
+                                controller: 'ChangepasswordCtrl'
                             }
                         }
                     })
